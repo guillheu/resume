@@ -8,8 +8,9 @@
     {} % Empty date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {\textbf{Ubuntu Server configured with cloud-init, Kubernetes, Prometheus, Grafana,PfSense, Docker, DynDNS}}
-        \item {Kubernetes services : \textbf{ArgoCD, Sealed-secrets, MetalLB, OpenEBS (ZFS storage), cert-manager, loki, prometheus \& promtail,\\nginx ingress controller}}
+        \item {\textbf{Home infrastructure with multiple physical servers running TrueNAS, Ubuntu Server, PFSense. Servers running IPMI.}}
+        \item {Kubernetes services : \textbf{ArgoCD, Sealed-secrets, IstIO, MetalLB, OpenEBS (ZFS storage), cert-manager, loki, prometheus \& promtail,\\nginx ingress controller}}
+        \item {Other solutions studied : \textbf{Hashicorp Terraform, Vault, Consul, Nomad.}}
         \item {Previously used : \textbf{Proxmox, NGINX reverse proxy, Windows server, PRTG, linux containers (LXC)}\\}
       \end{cvitems}
     }
@@ -21,10 +22,10 @@
   {} % Empty date
   {
     \begin{cvitems} % Description(s) bullet points
+      \item {\href{https://github.com/guillheu/K8-ingress-hub}{\underline{github.com/guillheu/K8-ingress-hub} : \textbf{Python, VueJS} Kubernetes ingress dashboard. Can be ran locally or deployed onto a kubernetes cluster.}}
       \item {\href{https://github.com/guillheu/docker-dev-env-generator}{\underline{github.com/guillheu/docker-dev-env-generator} : Simple \textbf{Rust} utility that will bootstrap a container-based development environment}}
       \item {\href{https://github.com/guillheu/kubernetes-sealed-secrets-key-archiver}{\underline{github.com/guillheu/kubernetes-sealed-secrets-key-archiver} : Sealed-secrets keys archiver (out-of-date)}}
-      \item {\href{https://github.com/guillheu/argocd-kustomize-helm-cmp}{\underline{github.com/guillheu/argocd-kustomize-helm-cmp} : ArgoCD plugin to combine Kustomize and Helm deployments}}
-      \item {\href{https://github.com/guillheu/nomad-testing}{\underline{github.com/guillheu/nomad-testing} : Playing around and learning \textbf{Hashicorp Nomad, Consul and Ansible.}}\\}
+      \item {\href{https://github.com/guillheu/argocd-kustomize-helm-cmp}{\underline{github.com/guillheu/argocd-kustomize-helm-cmp} : ArgoCD plugin to combine Kustomize and Helm deployments\\}}
     \end{cvitems}
   }
   
@@ -36,9 +37,8 @@
       {
         \begin{cvitems} % Description(s) bullet points
           \item {Design of storage and compute solutions of multiple applications for several platforms.}
-          \item {Blockchain nodes : \textbf{Polygon Avail, ZKEVM, Q-blockchain, Polygon PoS, NeM, Nano...}}
-          \item {Other apps : \textbf{\href{https://github.com/guillheu/tmodloader-docker}{Terraria/tModLoader} game server, Minecraft server, \href{https://github.com/cynicaloptimist/improved-initiative}{Improved-initiative}}}
-          \item {Platforms used : \textbf{Docker/Docker-compose, Kubernetes, Helm}\\}
+          \item {Blockchain nodes : \textbf{Q-blockchain, Avail, Tezos, Presearch, Geth-based nodes...}}
+          \item {Platforms used : \textbf{Docker/Docker-compose, Kubernetes, Helm, ArgoCD}\\}
         \end{cvitems}
       }
   \cventry
@@ -56,14 +56,15 @@
  
   \cventry
     {} % Empty position
-    {Windows VM with GPU \& NVME \& CPU passthrough on Linux host} % Project
+    {Other smaller projects} % Project
     {} % Empty location
     {} % Empty date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Windows virtual machine for personal use, with VFIO GPU passthrough for almost bare-metal gaming performance.}
-        \item {Discovery of IOMMU groups; custom linux kernel patching (ACS), compiling and installation ; KVM-Qemu Virtual machine setup.}
-        \item {Infamous "Error 43" workaround (No longer necessary).\\}
+        \item {Linux VFIO GPU passthrough for a Windows gaming VM}
+        \item {Playing around with Hashicorp Nomad \href{https://github.com/guillheu/nomad-testing}{github.com/guillheu/nomad-testing}}
+        \item {RaspberryPI-based security camera}
+        \item {Linux daemon to automatically turn on my home PC when I get home (detecting my phone's mac address on my local network and sending a Wake-on-Lan packet)}
       \end{cvitems}
     }
   % \cventry
