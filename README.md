@@ -1,2 +1,2 @@
 [English resume](/resume-en.pdf)<br>
-[French resume (out of date)](/resume-fr.pdf)
+[French resume](/resume-fr.pdf)
