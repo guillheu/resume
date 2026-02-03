@@ -24,8 +24,8 @@ pub const cisco_progress = 40
 
 pub fn cisco_level(lang: Language) -> String {
   case lang {
-    English -> "Solid foundations"
-    French -> "Fondations solides"
+    English -> "Foundations"
+    French -> "Fondations"
   }
 }
 

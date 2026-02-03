@@ -1,7 +1,9 @@
+import localization
 import lustre/attribute.{attribute}
 import lustre/element.{type Element}
 import lustre/element/html
 import lustre/element/svg
+import lustre/event
 import model.{type Model}
 import update.{type Msg}
 
@@ -9,6 +11,7 @@ pub fn get(model: Model) -> Element(Msg) {
   let picture = picture()
   let name = name(model)
   let links = links(model)
+  // let flags = flags(model.language)
   html.header(
     [
       attribute.class(
@@ -90,8 +93,32 @@ fn links(model: Model) -> Element(Msg) {
           html.span([], [html.text(model.github)]),
         ],
       ),
+      flags(model.language),
     ],
   )
+}
+
+fn flags(lang: localization.Language) -> Element(Msg) {
+  let #(fr_fade, en_fade) = case lang {
+    localization.English -> #(" opacity-50", "")
+    localization.French -> #("", " opacity-50")
+  }
+
+  html.div([attribute.class("flex gap-4 h-10 w-10 ml-15 cursor-pointer")], [
+    html.img([
+      attribute.src("/image/france.png"),
+      attribute.alt("Français"),
+      attribute.class(fr_fade),
+      event.on_click(update.UserChangedLanguage(localization.French)),
+    ]),
+
+    html.img([
+      attribute.src("/image/uk.png"),
+      attribute.alt("English"),
+      attribute.class(en_fade),
+      event.on_click(update.UserChangedLanguage(localization.English)),
+    ]),
+  ])
 }
 
 fn github_icon() -> Element(Msg) {
