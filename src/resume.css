@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: white;
+    color: #171717;
+    line-height: 1.625;
+    font-size: 15px;
+}
+
+@media print {
+    body {
+    font-size: 12px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    }
+    .resume {
+    padding: 0;
+    max-width: 100%;
+    }
+    .section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    }
+    .section:not(:first-of-type) {
+    page-break-before: auto;
+    break-before: auto;
+    }
+    header {
+    page-break-after: avoid;
+    break-after: avoid;
+    }
+    .project-card,
+    .experience-item,
+    .education-item,
+    .skill-category {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    }
+    .section-title,
+    h1, h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+    }
+    .projects-grid,
+    .skills-grid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    }
+}
