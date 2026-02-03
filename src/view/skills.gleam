@@ -22,7 +22,7 @@ pub fn get(model: Model) -> Element(Msg) {
     html.div(
       [
         attribute.class(
-          "skills-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 pb-3 border-b border-neutral-200",
+          "skills-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 pb-3",
         ),
       ],
       skill_categories,
