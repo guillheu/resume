@@ -41,7 +41,7 @@ fn picture() -> Element(Msg) {
       "w-24 h-24 rounded-full object-cover border-[3px] border-neutral-200 shrink-0",
     ),
     attribute.alt("Alex Morgan"),
-    attribute.src("image/profile-photo.jpg"),
+    attribute.src("resume/image/profile-photo.jpg"),
   ])
 }
 
@@ -106,14 +106,14 @@ fn flags(lang: localization.Language) -> Element(Msg) {
 
   html.div([attribute.class("flex gap-4 h-10 w-10 ml-15 cursor-pointer")], [
     html.img([
-      attribute.src("/image/france.png"),
+      attribute.src("/resume/image/france.png"),
       attribute.alt("Français"),
       attribute.class(fr_fade),
       event.on_click(update.UserChangedLanguage(localization.French)),
     ]),
 
     html.img([
-      attribute.src("/image/uk.png"),
+      attribute.src("/resume/image/uk.png"),
       attribute.alt("English"),
       attribute.class(en_fade),
       event.on_click(update.UserChangedLanguage(localization.English)),
