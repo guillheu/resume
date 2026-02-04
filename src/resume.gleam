@@ -1,6 +1,6 @@
 import lustre
 import lustre/effect.{type Effect}
-import model.{type Model, Model}
+import model.{type Model}
 import update.{type Msg}
 import view
 

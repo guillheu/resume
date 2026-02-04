@@ -4,6 +4,8 @@ import content/skills/databases
 import content/skills/languages
 import content/skills/security
 import content/skills/spoken_languages
+import gleam/int
+import gleam/order
 
 // import content/education/certifications
 import content/education/descartes
@@ -24,7 +26,7 @@ import content/skills/devops
 import content/skills/networking
 import content/skills/sysadmin
 import gleam/list
-import localization.{type Language, type LocalizedString, English, French}
+import localization.{type Language, type LocalizedString, French}
 
 pub type Model {
   Model(
@@ -194,38 +196,58 @@ pub fn new() -> Model {
     skills: [
       SkillCategory(
         title: languages.category_title,
-        skills: languages.skills |> list.map(tuple_to_skill),
+        skills: languages.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: sysadmin.category_title,
-        skills: sysadmin.skills |> list.map(tuple_to_skill),
+        skills: sysadmin.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: networking.category_title,
-        skills: networking.skills |> list.map(tuple_to_skill),
+        skills: networking.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: devops.category_title,
-        skills: devops.skills |> list.map(tuple_to_skill),
+        skills: devops.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: blockchain.category_title,
-        skills: blockchain.skills |> list.map(tuple_to_skill),
+        skills: blockchain.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: security.category_title,
-        skills: security.skills |> list.map(tuple_to_skill),
+        skills: security.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: databases.category_title,
-        skills: databases.skills |> list.map(tuple_to_skill),
+        skills: databases.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
       SkillCategory(
         title: spoken_languages.category_title,
-        skills: spoken_languages.skills |> list.map(tuple_to_skill),
+        skills: spoken_languages.skills
+          |> list.map(tuple_to_skill)
+          |> list.sort(sort_skills),
       ),
     ],
   )
+}
+
+fn sort_skills(skill1: Skill, skill2: Skill) -> order.Order {
+  int.compare(skill2.progress, skill1.progress)
 }
 
 fn tuple_to_skill(from: #(String, Int, LocalizedString)) -> Skill {
