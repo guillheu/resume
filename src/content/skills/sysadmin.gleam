@@ -19,12 +19,12 @@ pub fn category_title(lang: Language) -> String {
 
 pub const linux_title = "Linux"
 
-pub const linux_progress = 50
+pub const linux_progress = 55
 
 pub fn linux_level(lang: Language) -> String {
   case lang {
-    English -> "Intermediate"
-    French -> "Intermédiaire"
+    English -> "Average"
+    French -> "Moyen"
   }
 }
 
@@ -62,8 +62,8 @@ pub const virt_progress = 50
 
 pub fn virt_level(lang: Language) -> String {
   case lang {
-    English -> "Intermediate"
-    French -> "Intermédiaire"
+    English -> "Average"
+    French -> "Moyen"
   }
 }
 

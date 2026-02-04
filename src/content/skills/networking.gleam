@@ -24,8 +24,8 @@ pub const cisco_progress = 40
 
 pub fn cisco_level(lang: Language) -> String {
   case lang {
-    English -> "Foundations"
-    French -> "Fondations"
+    English -> "Average"
+    French -> "Moyen"
   }
 }
 
@@ -37,8 +37,8 @@ pub const ospf_progress = 50
 
 pub fn ospf_level(lang: Language) -> String {
   case lang {
-    English -> "Intermediate"
-    French -> "Intermédiaire"
+    English -> "Average"
+    French -> "Moyen"
   }
 }
 

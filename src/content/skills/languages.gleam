@@ -105,8 +105,8 @@ pub const python_progress = 55
 
 pub fn python_level(lang: Language) -> String {
   case lang {
-    English -> "Intermediary"
-    French -> "Intermédiaire"
+    English -> "Averarge"
+    French -> "Moyen"
   }
 }
 

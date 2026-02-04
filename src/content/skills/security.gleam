@@ -22,8 +22,8 @@ pub const web_progress = 60
 
 pub fn web_level(lang: Language) -> String {
   case lang {
-    English -> "Average"
-    French -> "Moyen"
+    English -> "Advanced"
+    French -> "Avancé"
   }
 }
 
