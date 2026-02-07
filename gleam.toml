@@ -37,3 +37,21 @@ links = [
     { rel = "preconnect", href = "https://fonts.gstatic.com", crossorigin = "" },
     { rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" },
 ]
+meta = [
+    { name = "description", content = "" },
+
+    # Facebook meta tags
+    { property = "og:url", content = "https://resume.guillheu.dev/" },
+    { property = "og:type", content = "website" },
+    { property = "og:title", content = "CV Guillaume Heu" },
+    { property = "og:description", content = "" },
+    { property = "og:image", content = "https://resume.guillheu.dev/image/profile-photo.jpg" },
+
+    # Twitter meta tags
+    { property = "twitter:card", content = "summary_large_image" },
+    { property = "twitter:domain", content = "resume.guillheu.dev" },
+    { property = "twitter:url", content = "https://resume.guillheu.dev/" },
+    { property = "twitter:title", content = "CV Guillaume Heu" },
+    { property = "twitter:description", content = "" },
+    { property = "twitter:image", content = "https://resume.guillheu.dev/image/profile-photo.jpg" },
+]
