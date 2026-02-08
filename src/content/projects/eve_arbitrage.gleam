@@ -11,7 +11,7 @@ pub const techs = [
 ]
 
 pub const links = [
-  #("Link ", "#"),
+  #("Link ", "https://eve-arbitrage.guillheu.dev/"),
   #("Github", "https://github.com/guillheu/Eve-Arbitrage"),
   #("Youtube", "#"),
 ]
