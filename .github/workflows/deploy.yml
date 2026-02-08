@@ -29,8 +29,7 @@ jobs:
         run: |
           bun install -D tailwindcss
           echo "$GITHUB_WORKSPACE/node_modules/.bin" >> $GITHUB_PATH
-      - name: Verify Tailwind install
-        run: which tailwindcss
+          which tailwindcss
       - name: Install dependencies
         run: gleam deps download
       - name: Build app
