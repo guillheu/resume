@@ -23,6 +23,10 @@ jobs:
           otp-version: "28.0"
           gleam-version: "1.14.0"
           rebar3-version: "3"
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+      - name: Install Tailwind CSS
+        run: bun install -D tailwindcss
       - name: Install dependencies
         run: gleam deps download
       - name: Build app
