@@ -11,6 +11,13 @@ import view/experience
 import view/projects
 import view/skills
 
+fn get_language_title(lang: localization.Language) -> String {
+  case lang {
+    localization.English -> "Language"
+    localization.French -> "Langue"
+  }
+}
+
 pub fn get(model: Model) -> Element(Msg) {
   html.nav(
     [
@@ -72,7 +79,7 @@ pub fn get(model: Model) -> Element(Msg) {
               "text-xs font-bold uppercase tracking-widest text-neutral-400 px-3",
             ),
           ],
-          [html.text("Language")],
+          [html.text(get_language_title(model.language))],
         ),
         html.div([attribute.class("flex gap-3 px-3")], [
           html.button(
