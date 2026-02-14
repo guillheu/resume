@@ -135,7 +135,7 @@ fn make_link(link: #(String, String)) -> Element(Msg) {
 
   html.a(
     [
-      attribute.class("text-[13px] text-teal-600 hover:underline"),
+      attribute.class("project-link text-[13px] text-teal-600 hover:underline"),
       attribute.href(url),
       attribute.target("_blank"),
     ],
