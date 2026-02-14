@@ -1,13 +1,15 @@
 import gleam/list
+import gleam/option
 import localization
 import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 import model.{type Model}
-import update.{type Msg}
+import update/message.{type Msg}
 
 pub fn get(model: Model) -> Element(Msg) {
   let projects = list.map(model.projects, make_project(_, model.language))
+  // |> list.append([make_large_project()])
 
   html.section([attribute.class("section mb-8"), attribute.id("projects")], [
     html.h2(
@@ -38,9 +40,64 @@ fn make_project(
   project: model.Project,
   language: localization.Language,
 ) -> Element(Msg) {
+  let title = project.title(language)
   let links = list.map(project.links, make_link)
   let techs = list.map(project.techs, make_tech)
+  let description = project.description(language)
+  case project.embed {
+    option.Some(embed) -> fn(title, links, techs, desc) {
+      project_with_embed(title, links, techs, desc, embed)
+    }
+    option.None -> project_no_embed
+  }(title, links, techs, description)
+}
 
+fn project_with_embed(
+  title: String,
+  links: List(Element(Msg)),
+  techs: List(Element(Msg)),
+  description: String,
+  embed: Element(Msg),
+) -> Element(Msg) {
+  html.div(
+    [
+      attribute.class(
+        "project-card sm:col-span-2 flex flex-col sm:flex-row border border-neutral-200 rounded-lg bg-neutral-50 overflow-hidden",
+      ),
+    ],
+    [
+      html.div(
+        [
+          attribute.class(
+            "sm:w-1/2 shrink-0 flex items-center justify-center p-2 overflow-hidden",
+          ),
+        ],
+        [embed],
+      ),
+      html.div([attribute.class("p-5 flex flex-col justify-between")], [
+        html.div([], [
+          html.div([attribute.class("flex justify-between items-start mb-2")], [
+            html.span([attribute.class("text-lg font-semibold")], [
+              html.text(title),
+            ]),
+            html.div([attribute.class("flex gap-2")], links),
+          ]),
+          html.p([attribute.class("text-sm text-neutral-600 mb-3")], [
+            html.text(description),
+          ]),
+        ]),
+        html.div([attribute.class("flex flex-wrap gap-1.5")], techs),
+      ]),
+    ],
+  )
+}
+
+fn project_no_embed(
+  title: String,
+  links: List(Element(Msg)),
+  techs: List(Element(Msg)),
+  description: String,
+) -> Element(Msg) {
   html.div(
     [
       attribute.class(
@@ -50,12 +107,12 @@ fn make_project(
     [
       html.div([attribute.class("flex justify-between items-start mb-2")], [
         html.span([attribute.class("font-semibold")], [
-          html.text(project.title(language)),
+          html.text(title),
         ]),
         html.div([attribute.class("flex gap-2")], links),
       ]),
       html.p([attribute.class("text-sm text-neutral-600 mb-3")], [
-        html.text(project.description(language)),
+        html.text(description),
       ]),
       html.div([attribute.class("flex flex-wrap gap-1.5")], techs),
     ],

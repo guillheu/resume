@@ -14,8 +14,8 @@ pub fn title(lang: Language) -> String {
 pub fn description(lang: Language) -> String {
   case lang {
     English ->
-      "Proto-library in Gleam to interact with EVM Blockchains (Ethereum). Capable of RPC queries and signing and sending transactions on a blockchain"
+      "Proto-library in Gleam to interact with EVM Blockchains (Ethereum). Capable of RPC queries and signing and sending transactions"
     French ->
-      "Proto-bibliothèque Gleam pour interagir avec des Blockchains EVM (Ethereum). Capable de requêtes RPC et de signer et envoyer des transactions sur une blockchain"
+      "Proto-bibliothèque Gleam pour interagir avec des Blockchains EVM (Ethereum). Capable de requêtes RPC et de signer et envoyer des transactions"
   }
 }

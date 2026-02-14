@@ -4,7 +4,7 @@ import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 import model.{type Model}
-import update.{type Msg}
+import update/message.{type Msg}
 
 pub fn get(model: Model) -> Element(Msg) {
   let section_title =

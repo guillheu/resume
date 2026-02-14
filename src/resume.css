@@ -51,4 +51,7 @@ body {
     page-break-inside: avoid;
     break-inside: avoid;
     }
+    iframe {
+        display: none;
+    }
 }

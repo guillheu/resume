@@ -5,7 +5,7 @@ import lustre/element/html
 import lustre/element/svg
 import lustre/event
 import model.{type Model}
-import update.{type Msg}
+import update/message.{type Msg}
 import view/education
 import view/experience
 import view/projects
@@ -88,7 +88,7 @@ pub fn get(model: Model) -> Element(Msg) {
                 "cursor-pointer bg-transparent border-none p-0 opacity-80 hover:opacity-100 transition-opacity",
               ),
               attribute("title", "English"),
-              event.on_click(update.UserChangedLanguage(localization.English)),
+              event.on_click(message.UserChangedLanguage(localization.English)),
             ],
             [
               svg.svg(
@@ -146,7 +146,7 @@ pub fn get(model: Model) -> Element(Msg) {
                 "cursor-pointer bg-transparent border-none p-0 opacity-80 hover:opacity-100 transition-opacity",
               ),
               attribute("title", "Francais"),
-              event.on_click(update.UserChangedLanguage(localization.French)),
+              event.on_click(message.UserChangedLanguage(localization.French)),
             ],
             [
               svg.svg(

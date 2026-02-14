@@ -5,7 +5,10 @@ import content/skills/languages
 import content/skills/security
 import content/skills/spoken_languages
 import gleam/int
+import gleam/option.{type Option, None, Some}
 import gleam/order
+import lustre/element
+import update/message
 
 // import content/education/certifications
 import content/education/descartes
@@ -69,6 +72,7 @@ pub type Project {
     description: LocalizedString,
     techs: List(String),
     links: List(#(String, String)),
+    embed: Option(element.Element(message.Msg)),
   )
 }
 
@@ -145,52 +149,57 @@ pub fn new() -> Model {
     ],
     projects: [
       Project(
+        title: eve_arbitrage.title,
+        description: eve_arbitrage.description,
+        techs: eve_arbitrage.techs,
+        links: eve_arbitrage.links,
+        embed: Some(eve_arbitrage.get_embed()),
+      ),
+      Project(
         title: themis.title,
         description: themis.description,
         techs: themis.techs,
         links: themis.links,
+        embed: None,
       ),
       Project(
         title: homelab.title,
         description: homelab.description,
         techs: homelab.techs,
         links: homelab.links,
+        embed: None,
       ),
-      Project(
-        title: pc_building.title,
-        description: pc_building.description,
-        techs: pc_building.techs,
-        links: pc_building.links,
-      ),
-      Project(
-        title: eve_arbitrage.title,
-        description: eve_arbitrage.description,
-        techs: eve_arbitrage.techs,
-        links: eve_arbitrage.links,
-      ),
+      // Project(
+      //   title: pc_building.title,
+      //   description: pc_building.description,
+      //   techs: pc_building.techs,
+      //   links: pc_building.links,
+      // ),
       Project(
         title: evm_gleam.title,
         description: evm_gleam.description,
         techs: evm_gleam.techs,
         links: evm_gleam.links,
+        embed: None,
       ),
-      Project(
-        title: resume.title,
-        description: resume.description,
-        techs: resume.techs,
-        links: resume.links,
-      ),
-      Project(
-        title: argocd_bootstrap.title,
-        description: argocd_bootstrap.description,
-        techs: argocd_bootstrap.techs,
-        links: argocd_bootstrap.links,
-      ),
+      // Project(
+      //   title: resume.title,
+      //   description: resume.description,
+      //   techs: resume.techs,
+      //   links: resume.links,
+      // ),
+      // Project(
+      //   title: argocd_bootstrap.title,
+      //   description: argocd_bootstrap.description,
+      //   techs: argocd_bootstrap.techs,
+      //   links: argocd_bootstrap.links,
+      // ),
       Project(
         title: k8_ingress_hub.title,
         description: k8_ingress_hub.description,
         techs: k8_ingress_hub.techs,
         links: k8_ingress_hub.links,
+        embed: None,
       ),
     ],
     skills: [

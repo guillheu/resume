@@ -1,7 +1,8 @@
 import lustre
 import lustre/effect.{type Effect}
 import model.{type Model}
-import update.{type Msg}
+import update
+import update/message.{type Msg}
 import view
 
 pub fn main() {
