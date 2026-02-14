@@ -15,6 +15,9 @@ body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     }
+    .sidebar {
+        display: none !important;
+    }
     .resume {
     padding: 0;
     max-width: 100%;

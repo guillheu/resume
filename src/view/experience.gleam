@@ -7,11 +7,6 @@ import model.{type Model}
 import update.{type Msg}
 
 pub fn get(model: Model) -> Element(Msg) {
-  let title_string = case model.language {
-    localization.English -> "Professional Experience"
-    localization.French -> "Expérience professionnelle"
-  }
-
   let section_title =
     html.h2(
       [
@@ -19,15 +14,22 @@ pub fn get(model: Model) -> Element(Msg) {
           "section-title text-sm font-bold uppercase tracking-widest text-neutral-900 mb-5 py-2 px-4 bg-neutral-100 border-l-4 border-teal-600",
         ),
       ],
-      [html.text(title_string)],
+      [html.text(get_title(model.language))],
     )
   let experiences =
     list.map(model.experiences, make_experience(_, model.language))
 
   html.section(
-    [attribute.class("section mb-8")],
+    [attribute.class("section mb-8"), attribute.id("experience")],
     list.prepend(experiences, section_title),
   )
+}
+
+pub fn get_title(lang: localization.Language) -> String {
+  case lang {
+    localization.English -> "Professional Experience"
+    localization.French -> "Expérience professionnelle"
+  }
 }
 
 fn make_experience(

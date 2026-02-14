@@ -10,14 +10,14 @@ import update.{type Msg}
 pub fn get(model: Model) -> Element(Msg) {
   let skill_categories =
     list.map(model.skills, make_category(_, model.language))
-  html.section([attribute.class("section mb-8")], [
+  html.section([attribute.class("section mb-8"), attribute.id("skills")], [
     html.h2(
       [
         attribute.class(
           "section-title text-sm font-bold uppercase tracking-widest text-neutral-900 mb-5 py-2 px-4 bg-neutral-100 border-l-4 border-teal-600",
         ),
       ],
-      [html.text("Skills")],
+      [html.text(get_title(model.language))],
     ),
     html.div(
       [
@@ -28,6 +28,13 @@ pub fn get(model: Model) -> Element(Msg) {
       skill_categories,
     ),
   ])
+}
+
+pub fn get_title(lang: localization.Language) -> String {
+  case lang {
+    localization.English -> "Skills"
+    localization.French -> "Compétences"
+  }
 }
 
 fn make_category(

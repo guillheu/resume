@@ -1,9 +1,7 @@
-import localization
 import lustre/attribute.{attribute}
 import lustre/element.{type Element}
 import lustre/element/html
 import lustre/element/svg
-import lustre/event
 import model.{type Model}
 import update.{type Msg}
 
@@ -15,30 +13,17 @@ pub fn get(model: Model) -> Element(Msg) {
   html.header(
     [
       attribute.class(
-        "flex flex-col sm:flex-row justify-between items-start gap-8 pb-8 border-b border-neutral-200 mb-8",
+        "flex flex-col sm:flex-row justify-between items-center gap-8 pb-8 border-b border-neutral-200 mb-8",
       ),
     ],
-    [
-      html.div(
-        [
-          attribute.class(
-            "flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left",
-          ),
-        ],
-        [
-          picture,
-          name,
-        ],
-      ),
-      links,
-    ],
+    [picture, name, links],
   )
 }
 
 fn picture(name: String) -> Element(Msg) {
   html.img([
     attribute.class(
-      "w-24 h-24 rounded-full object-cover border-[3px] border-neutral-200 shrink-0",
+      "w-30 h-30 rounded-full object-cover border-[3px] border-neutral-200 shrink-0",
     ),
     attribute.alt(name),
     attribute.src("image/profile-photo.jpg"),
@@ -47,9 +32,12 @@ fn picture(name: String) -> Element(Msg) {
 
 fn name(model: Model) -> Element(Msg) {
   html.div([], [
-    html.h1([attribute.class("text-3xl font-bold tracking-tight")], [
-      html.text(model.fullname),
-    ]),
+    html.h1(
+      [attribute.class("text-[2.75rem] font-bold tracking-tight text-center")],
+      [
+        html.text(model.fullname),
+      ],
+    ),
   ])
 }
 
@@ -93,32 +81,8 @@ fn links(model: Model) -> Element(Msg) {
           html.span([], [html.text(model.github)]),
         ],
       ),
-      flags(model.language),
     ],
   )
-}
-
-fn flags(lang: localization.Language) -> Element(Msg) {
-  let #(fr_fade, en_fade) = case lang {
-    localization.English -> #(" opacity-50", "")
-    localization.French -> #("", " opacity-50")
-  }
-
-  html.div([attribute.class("flex gap-4 h-10 w-10 ml-15 cursor-pointer")], [
-    html.img([
-      attribute.src("image/france.png"),
-      attribute.alt("Français"),
-      attribute.class(fr_fade),
-      event.on_click(update.UserChangedLanguage(localization.French)),
-    ]),
-
-    html.img([
-      attribute.src("image/uk.png"),
-      attribute.alt("English"),
-      attribute.class(en_fade),
-      event.on_click(update.UserChangedLanguage(localization.English)),
-    ]),
-  ])
 }
 
 fn github_icon() -> Element(Msg) {

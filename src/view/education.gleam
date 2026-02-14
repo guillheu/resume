@@ -7,11 +7,6 @@ import model.{type Model}
 import update.{type Msg}
 
 pub fn get(model: Model) -> Element(Msg) {
-  let title_string = case model.language {
-    localization.English -> "Education"
-    localization.French -> "Éducation"
-  }
-
   let title =
     html.h2(
       [
@@ -19,14 +14,24 @@ pub fn get(model: Model) -> Element(Msg) {
           "section-title text-sm font-bold uppercase tracking-widest text-neutral-900 mb-5 py-2 px-4 bg-neutral-100 border-l-4 border-teal-600",
         ),
       ],
-      [html.text(title_string)],
+      [html.text(get_title(model.language))],
     )
 
   let educations = list.map(model.educations, make_education(_, model.language))
 
   let contents = [title, ..educations]
 
-  html.section([attribute.class("section mb-8")], contents)
+  html.section(
+    [attribute.class("section mb-8"), attribute.id("education")],
+    contents,
+  )
+}
+
+pub fn get_title(lang: localization.Language) -> String {
+  case lang {
+    localization.English -> "Education"
+    localization.French -> "Éducation"
+  }
 }
 
 fn make_education(
