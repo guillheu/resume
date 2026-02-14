@@ -1,3 +1,3 @@
 # Resume
 
-My Resume using Gleam and Lustre!
+[https://resume.guillheu.dev](https://resume.guillheu.dev)
