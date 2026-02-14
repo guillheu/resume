@@ -9,8 +9,8 @@ pub const links = [
 
 pub fn title(lang: Language) -> String {
   case lang {
-    English -> "This resume!"
-    French -> "Ce CV !"
+    English -> "This resume"
+    French -> "Ce CV"
   }
 }
 
