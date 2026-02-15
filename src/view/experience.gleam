@@ -40,12 +40,12 @@ fn make_experience(
   let techs = list.map(experience.techs, make_tech)
 
   html.div(
-    [attribute.class("experience-item mb-6 pb-6 border-b border-neutral-200")],
+    [attribute.class("experience-item mb-3 pb-3 border-b border-neutral-200")],
     [
       html.div(
         [
           attribute.class(
-            "flex flex-col sm:flex-row justify-between items-start gap-1 mb-2",
+            "flex flex-col sm:flex-row justify-between items-start gap-1 mb-2 ",
           ),
         ],
         [
@@ -53,14 +53,14 @@ fn make_experience(
             html.div([attribute.class("text-[17px] font-semibold")], [
               html.text(experience.title(language)),
             ]),
-            html.div([attribute.class("text-neutral-600 font-medium")], [
+            html.div([attribute.class("text-neutral-800 font-medium")], [
               html.text(experience.company),
             ]),
           ]),
           html.div([attribute.class("text-right")], [
             html.span(
               [
-                attribute.class("text-sm text-neutral-500 whitespace-nowrap"),
+                attribute.class("text-sm text-neutral-700 whitespace-nowrap"),
               ],
               [html.text(experience.duration(language))],
             ),
@@ -70,7 +70,7 @@ fn make_experience(
           ]),
         ],
       ),
-      html.div([attribute.class("text-neutral-600 mb-3")], [
+      html.div([attribute.class("text-neutral-600 mb-1")], [
         html.ul([attribute.class("ml-5 list-disc")], tasks),
       ]),
       html.div([attribute.class("flex flex-wrap gap-1.5")], techs),

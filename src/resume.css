@@ -23,7 +23,7 @@ body {
     }
     .resume {
     padding: 0;
-    max-width: 100%;
+    max-width: 85%;
     }
     .section {
     page-break-inside: avoid;

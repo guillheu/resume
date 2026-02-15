@@ -106,7 +106,7 @@ fn project_no_embed(
     ],
     [
       html.div([attribute.class("flex justify-between items-start mb-2")], [
-        html.span([attribute.class("font-semibold")], [
+        html.span([attribute.class("text-lg font-semibold")], [
           html.text(title),
         ]),
         html.div([attribute.class("flex gap-2")], links),

@@ -13,7 +13,7 @@ pub fn get(model: Model) -> Element(Msg) {
   html.header(
     [
       attribute.class(
-        "flex flex-col sm:flex-row justify-between items-center gap-8 pb-8 border-b border-neutral-200 mb-8",
+        "flex flex-col sm:flex-row justify-between items-center gap-8 pb-4 border-b border-neutral-200 mb-4",
       ),
     ],
     [picture, name, links],
