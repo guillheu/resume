@@ -58,7 +58,7 @@ pub fn task_3(lang: Language) -> String {
     English ->
       "Cisco instructor for CCNA and CCNP courses. One to two week-long professional trainings per month, each with 2 to 4 students"
     French ->
-      "Instructeur Cisco cours CCNA and CCNP. Une à deux formations professionelles d'une semaine chaque mois, chacune avec 2‑4 clients"
+      "Instructeur Cisco cours CCNA et CCNP. Une à deux formations professionelles d'une semaine chaque mois, chacune avec 2‑4 clients"
   }
 }
 
