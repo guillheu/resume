@@ -32,9 +32,9 @@ pub fn title(lang: Language) -> String {
 pub fn description(lang: Language) -> String {
   case lang {
     English ->
-      "A real-time arbitration tool for the MMORPG \"Eve Online\". Presented at the Gleam Gathering conference in February 2026"
+      "A real-time arbitration tool for the MMORPG \"Eve Online\". Presented at the Gleam Gathering conference in February 2026 (Youtube video available soon)"
     French ->
-      "Un outil d'arbitrage en temps réel sur le MMORPG \"Eve Online\". Présenté à la conférence Gleam Gathering en Février 2026"
+      "Un outil d'arbitrage en temps réel sur le MMORPG \"Eve Online\". Présenté à la conférence Gleam Gathering en Février 2026 (Video Youtube bientôt disponible)"
   }
 }
 
