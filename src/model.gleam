@@ -149,13 +149,6 @@ pub fn new() -> Model {
     ],
     projects: [
       Project(
-        title: eve_arbitrage.title,
-        description: eve_arbitrage.description,
-        techs: eve_arbitrage.techs,
-        links: eve_arbitrage.links,
-        embed: Some(eve_arbitrage.get_embed()),
-      ),
-      Project(
         title: themis.title,
         description: themis.description,
         techs: themis.techs,
@@ -163,11 +156,12 @@ pub fn new() -> Model {
         embed: None,
       ),
       Project(
-        title: homelab.title,
-        description: homelab.description,
-        techs: homelab.techs,
-        links: homelab.links,
+        title: eve_arbitrage.title,
+        description: eve_arbitrage.description,
+        techs: eve_arbitrage.techs,
+        links: eve_arbitrage.links,
         embed: None,
+        // embed: Some(eve_arbitrage.get_embed()),
       ),
       // Project(
       //   title: pc_building.title,
@@ -175,6 +169,13 @@ pub fn new() -> Model {
       //   techs: pc_building.techs,
       //   links: pc_building.links,
       // ),
+      Project(
+        title: homelab.title,
+        description: homelab.description,
+        techs: homelab.techs,
+        links: homelab.links,
+        embed: None,
+      ),
       Project(
         title: evm_gleam.title,
         description: evm_gleam.description,
@@ -189,13 +190,13 @@ pub fn new() -> Model {
       //   links: resume.links,
       //   embed: None,
       // ),
-      // Project(
-      //   title: argocd_bootstrap.title,
-      //   description: argocd_bootstrap.description,
-      //   techs: argocd_bootstrap.techs,
-      //   links: argocd_bootstrap.links,
-      //   embed: None,
-      // ),
+      Project(
+        title: argocd_bootstrap.title,
+        description: argocd_bootstrap.description,
+        techs: argocd_bootstrap.techs,
+        links: argocd_bootstrap.links,
+        embed: None,
+      ),
       Project(
         title: k8_ingress_hub.title,
         description: k8_ingress_hub.description,

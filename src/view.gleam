@@ -17,7 +17,7 @@ pub fn view(model: Model) -> Element(Msg) {
   let experience = experience.get(model)
   let education = education.get(model)
   let projects = projects.get(model)
-  let skills = skills.get(model)
+  // let skills = skills.get(model)
 
   html.div([attribute.class("resume max-w-[850px] mx-auto py-12 px-8")], [
     sidebar,
@@ -25,6 +25,6 @@ pub fn view(model: Model) -> Element(Msg) {
     experience,
     education,
     projects,
-    skills,
+    // skills,
   ])
 }

@@ -62,15 +62,15 @@ pub fn get(model: Model) -> Element(Msg) {
           ],
           [html.text(projects.get_title(model.language))],
         ),
-        html.a(
-          [
-            attribute.class(
-              "text-sm text-neutral-600 hover:text-teal-600 hover:bg-neutral-100 transition-colors px-3 py-2 rounded",
-            ),
-            attribute.href("#skills"),
-          ],
-          [html.text(skills.get_title(model.language))],
-        ),
+        // html.a(
+      //   [
+      //     attribute.class(
+      //       "text-sm text-neutral-600 hover:text-teal-600 hover:bg-neutral-100 transition-colors px-3 py-2 rounded",
+      //     ),
+      //     attribute.href("#skills"),
+      //   ],
+      //   [html.text(skills.get_title(model.language))],
+      // ),
       ]),
       html.div([attribute.class("flex flex-col gap-3")], [
         html.span(

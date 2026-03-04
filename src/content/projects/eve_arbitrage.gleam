@@ -17,7 +17,7 @@ pub const techs = [
 pub const links = [
   #("Link ", "https://eve-arbitrage.guillheu.dev/"),
   #("Github", "https://github.com/guillheu/Eve-Arbitrage"),
-  #("Youtube", "https://youtu.be/" <> video_code),
+  // #("Youtube", "https://youtu.be/" <> video_code),
 ]
 
 pub fn title(lang: Language) -> String {
