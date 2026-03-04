@@ -14,6 +14,8 @@ pub const techs = [
   "v0.app",
 ]
 
+const video_title = "Gleam Gathering 2026 - Eve Online Arbitrage - Guillaume Heu"
+
 pub const links = [
   #("Link ", "https://eve-arbitrage.guillheu.dev/"),
   #("Github", "https://github.com/guillheu/Eve-Arbitrage"),
@@ -38,6 +40,9 @@ pub fn description(lang: Language) -> String {
 
 pub fn get_embed() {
   html.div([attribute.class("relative w-full h-full")], [
+    html.h2([attribute.class("hidden print:block text-center")], [
+      html.text(video_title),
+    ]),
     html.iframe([
       attribute.class("w-full h-full object-cover rounded-lg print:hidden"),
       attribute("allowfullscreen", ""),
@@ -52,9 +57,7 @@ pub fn get_embed() {
       attribute.width(500),
     ]),
     html.img([
-      attribute.class(
-        "hidden print:block w-full h-full object-cover rounded-lg absolute inset-0",
-      ),
+      attribute.class("hidden print:block object-cover rounded-lg"),
       attribute.alt("Video thumbnail"),
       attribute.src(
         "https://img.youtube.com/vi/" <> video_code <> "/hqdefault.jpg",
