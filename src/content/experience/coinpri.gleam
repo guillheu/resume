@@ -17,8 +17,8 @@ pub const techs = [
 
 pub fn title(lang: Language) -> String {
   case lang {
-    English -> "Site Reliability Specialist"
-    French -> "Spécialiste fiabilité de site"
+    English -> "Infrastructure Engineer (Solo)"
+    French -> "Ingénieur Infrastructure (Solo)"
   }
 }
 
@@ -41,7 +41,7 @@ pub fn task_1(lang: Language) -> String {
     English ->
       "Infrastructure design for blockchain nodes for high availability"
     French ->
-      "Design infrastructure pour noeuds blockchain pour de la haute disponibilité"
+      "Design infrastructure pour noeuds blockchain de haute disponibilité"
   }
 }
 
