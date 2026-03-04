@@ -41,7 +41,7 @@ pub fn task_1(lang: Language) -> String {
     English ->
       "Infrastructure design for blockchain nodes for high availability"
     French ->
-      "Design infrastructure pour noeuds blockchain de haute disponibilité"
+      "Design infrastructure pour nœuds blockchain de haute disponibilité"
   }
 }
 
@@ -56,7 +56,7 @@ pub fn task_2(lang: Language) -> String {
 pub fn task_3(lang: Language) -> String {
   case lang {
     English -> "8 blockchain nodes in production"
-    French -> "8 noeuds blockchain en production"
+    French -> "8 nœuds blockchain en production"
   }
 }
 

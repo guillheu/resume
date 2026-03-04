@@ -16,6 +16,6 @@ pub fn description(lang: Language) -> String {
     English ->
       "A Kubernetes application to quickly viualize and access all \"Ingress\" resources of a cluster"
     French ->
-      "Une application Kubernetes permettant de rapidement visualiser et accéder aux differentes ressources \"Ingress\" d'un cluster"
+      "Une application Kubernetes permettant de rapidement visualiser et accéder aux différentes ressources \"Ingress\" d'un cluster"
   }
 }

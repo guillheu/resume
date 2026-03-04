@@ -41,7 +41,7 @@ pub fn task_1(lang: Language) -> String {
     English ->
       "MIIT instructor, networking courses for people in career transition. Training lasting 3 months, 15-20 students"
     French ->
-      "Instructeur MIIT, cours réseaux pour public en reconversion professionelle. Formation de 3 mois, 15‑20 élèves"
+      "Instructeur MIIT, cours réseaux pour public en reconversion professionnelle. Formation de 3 mois, 15‑20 élèves"
   }
 }
 
@@ -58,7 +58,7 @@ pub fn task_3(lang: Language) -> String {
     English ->
       "Cisco instructor for CCNA and CCNP courses. One to two week-long professional trainings per month, each with 2 to 4 students"
     French ->
-      "Instructeur Cisco cours CCNA et CCNP. Une à deux formations professionelles d'une semaine chaque mois, chacune avec 2‑4 clients"
+      "Instructeur Cisco cours CCNA et CCNP. Une à deux formations professionnelles d'une semaine chaque mois, chacune avec 2‑4 clients"
   }
 }
 
@@ -76,7 +76,7 @@ pub fn task_5(lang: Language) -> String {
     English ->
       "ICX instructor at RTE-Orange, specialized training for Organge employees at their data center"
     French ->
-      "Instructeur ICX pour RTE‑Orange, formation spécialisée de professionels Orange dans leur data center"
+      "Instructeur ICX pour RTE‑Orange, formation spécialisée de professionnels Orange dans leur data center"
   }
 }
 

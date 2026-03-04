@@ -26,6 +26,6 @@ pub fn description(lang: Language) -> String {
     English ->
       "Set of self-built servers and network equipment running personal services. Endless source of self-learning opportunities."
     French ->
-      "Ensemble de serveurs montés à la main et équipements réseau faisant tourner des services personnels. Source d'apprentissage en auto-didacte"
+      "Ensemble de serveurs montés à la main et équipements réseau faisant tourner des services personnels. Source d'apprentissage en autodidacte"
   }
 }

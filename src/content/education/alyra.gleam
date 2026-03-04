@@ -48,6 +48,6 @@ pub fn task_4(lang: Language) -> String {
     English ->
       "Final project: DeSign, decentralized digital signature (github.com/guillheu/DeSign)"
     French ->
-      "Projet final : DeSign, Signature electronique décentralisée (github.com/guillheu/DeSign)"
+      "Projet final : DeSign, Signature électronique décentralisée (github.com/guillheu/DeSign)"
   }
 }
