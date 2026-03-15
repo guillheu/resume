@@ -9,7 +9,7 @@ pub const techs = [
   "Huawei",
   "CCNA",
   "CCNP",
-  "IINS",
+  "CCSI",
   "HCIA",
   "HCIP",
   "IoT",
@@ -47,9 +47,9 @@ pub fn task_1(lang: Language) -> String {
 
 pub fn task_2(lang: Language) -> String {
   case lang {
-    English -> "IINS Certification obtained to be a recognized Cisco instructor"
+    English -> "CCSI Certification obtained to be a recognized Cisco instructor"
     French ->
-      "Obtention de certification IINS pour être instructeur Cisco reconnu"
+      "Obtention de certification CCSI pour être instructeur Cisco reconnu"
   }
 }
 

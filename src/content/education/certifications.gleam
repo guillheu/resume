@@ -23,7 +23,7 @@ pub fn task_1(lang: Language) -> String {
 
 pub fn task_2(lang: Language) -> String {
   case lang {
-    English -> "IINS (Cisco instructor)"
-    French -> "IINS (instructeur Cisco)"
+    English -> "CCSI (Cisco instructor)"
+    French -> "CCSI (instructeur Cisco)"
   }
 }
