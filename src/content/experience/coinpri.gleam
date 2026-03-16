@@ -48,8 +48,9 @@ pub fn task_1(lang: Language) -> String {
 pub fn task_2(lang: Language) -> String {
   case lang {
     English ->
-      "Partnership with a small dozen of innovative blockchain projects"
-    French -> "Partenariat avec une dixaine de projets blockchain innovants"
+      "Blockchain validation partnership with a French government-owned institution"
+    French ->
+      "Partenariat de validation blockchain avec une institution publique Française"
   }
 }
 
