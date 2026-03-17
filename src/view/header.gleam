@@ -81,6 +81,18 @@ fn links(model: Model) -> Element(Msg) {
           html.span([], [html.text(model.github)]),
         ],
       ),
+      html.a(
+        [
+          attribute.class(
+            "flex items-center gap-2 text-neutral-600 hover:text-teal-600 transition-colors sm:justify-end",
+          ),
+          attribute.href("https://blog.guillheu.dev"),
+        ],
+        [
+          website_icon(),
+          html.span([], [html.text("blog.guillheu.dev")]),
+        ],
+      ),
     ],
   )
 }
@@ -148,6 +160,83 @@ fn email_icon() -> Element(Msg) {
       ]),
       svg.path([
         attribute("d", "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"),
+      ]),
+    ],
+  )
+}
+
+fn website_icon() -> Element(Msg) {
+  svg.svg(
+    [
+      attribute("fill", "#000000"),
+      attribute("xml:space", "preserve"),
+      attribute("enable-background", "new 0 0 32 32"),
+      attribute("viewBox", "0 0 32 32"),
+      attribute("height", "16px"),
+      attribute("width", "16px"),
+      attribute("xmlns:xlink", "http://www.w3.org/1999/xlink"),
+      attribute("xmlns", "http://www.w3.org/2000/svg"),
+      attribute.id("Layer_1"),
+      attribute("version", "1.1"),
+    ],
+    [
+      svg.g(
+        [attribute("stroke-width", "0"), attribute.id("SVGRepo_bgCarrier")],
+        [],
+      ),
+      svg.g(
+        [
+          attribute("stroke-linejoin", "round"),
+          attribute("stroke-linecap", "round"),
+          attribute.id("SVGRepo_tracerCarrier"),
+        ],
+        [],
+      ),
+      svg.g([attribute.id("SVGRepo_iconCarrier")], [
+        svg.g([], [
+          svg.path([
+            attribute(
+              "d",
+              "M30.5,0h-29C0.673,0,0,0.673,0,1.5v8C0,10.327,0.673,11,1.5,11h29c0.827,0,1.5-0.673,1.5-1.5v-8 C32,0.673,31.327,0,30.5,0z M31,9.5c0,0.275-0.225,0.5-0.5,0.5h-29C1.225,10,1,9.775,1,9.5v-8C1,1.225,1.225,1,1.5,1h29 C30.775,1,31,1.225,31,1.5V9.5z",
+            ),
+            attribute("fill", "#404040"),
+          ]),
+          svg.path([
+            attribute(
+              "d",
+              "M31.5,12.5c-0.276,0-0.5,0.224-0.5,0.5v17.5c0,0.275-0.225,0.5-0.5,0.5h-29C1.225,31,1,30.775,1,30.5V13 c0-0.276-0.224-0.5-0.5-0.5S0,12.724,0,13v17.5C0,31.327,0.673,32,1.5,32h29c0.827,0,1.5-0.673,1.5-1.5V13 C32,12.724,31.776,12.5,31.5,12.5z",
+            ),
+            attribute("fill", "#404040"),
+          ]),
+          svg.path([
+            attribute(
+              "d",
+              "M13.5,27c0.827,0,1.5-0.673,1.5-1.5v-8c0-0.827-0.673-1.5-1.5-1.5h-8C4.673,16,4,16.673,4,17.5v8 C4,26.327,4.673,27,5.5,27H13.5z M5,25.5v-8C5,17.225,5.225,17,5.5,17h8c0.275,0,0.5,0.225,0.5,0.5v8c0,0.275-0.225,0.5-0.5,0.5h-8 C5.225,26,5,25.775,5,25.5z",
+            ),
+            attribute("fill", "#404040"),
+          ]),
+          svg.path([
+            attribute(
+              "d",
+              "M18,18h9c0.276,0,0.5-0.224,0.5-0.5S27.276,17,27,17h-9c-0.276,0-0.5,0.224-0.5,0.5S17.724,18,18,18z",
+            ),
+            attribute("fill", "#404040"),
+          ]),
+          svg.path([
+            attribute(
+              "d",
+              "M18,22h9c0.276,0,0.5-0.224,0.5-0.5S27.276,21,27,21h-9c-0.276,0-0.5,0.224-0.5,0.5S17.724,22,18,22z",
+            ),
+            attribute("fill", "#404040"),
+          ]),
+          svg.path([
+            attribute(
+              "d",
+              "M18,26h9c0.276,0,0.5-0.224,0.5-0.5S27.276,25,27,25h-9c-0.276,0-0.5,0.224-0.5,0.5S17.724,26,18,26z",
+            ),
+            attribute("fill", "#404040"),
+          ]),
+        ]),
       ]),
     ],
   )
