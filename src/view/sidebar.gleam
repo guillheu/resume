@@ -22,11 +22,13 @@ pub fn get(model: Model) -> Element(Msg) {
   html.nav(
     [
       attribute.class(
-        "sidebar fixed top-0 left-0 h-screen w-52 bg-neutral-50 border-r border-neutral-200 flex flex-col justify-between py-8 px-5 z-50",
+        // "sidebar fixed top-0 left-0 h-screen w-52 bg-neutral-50 border-r border-neutral-200 flex flex-col justify-between py-8 px-5 z-50",
+        // "sidebar fixed bottom-0 left-0 w-full flex flex-row items-center justify-center gap-3 bg-neutral-50 border-t border-neutral-200 py-3 z-50",
+        "sidebar fixed bottom-0 left-0 w-full flex flex-row items-center justify-center gap-3 bg-neutral-50 border-t border-neutral-200 py-3 z-50 md:top-0 md:bottom-auto md:h-screen md:w-52 md:flex-col md:items-stretch md:justify-between md:border-t-0 md:border-r md:py-8 md:px-5",
       ),
     ],
     [
-      html.div([attribute.class("flex flex-col gap-1")], [
+      html.div([attribute.class("hidden md:flex md:flex-col md:gap-1")], [
         html.span(
           [
             attribute.class(
@@ -76,7 +78,7 @@ pub fn get(model: Model) -> Element(Msg) {
         html.span(
           [
             attribute.class(
-              "text-xs font-bold uppercase tracking-widest text-neutral-400 px-3",
+              "hidden md:flex md:flex-col md:gap-1 text-xs font-bold uppercase tracking-widest text-neutral-400 px-3",
             ),
           ],
           [html.text(get_language_title(model.language))],
@@ -94,8 +96,8 @@ pub fn get(model: Model) -> Element(Msg) {
               svg.svg(
                 [
                   attribute.class("rounded"),
-                  attribute("height", "36"),
-                  attribute("width", "54"),
+                  attribute("height", "48"),
+                  attribute("width", "72"),
                   attribute("viewBox", "0 0 60 40"),
                   attribute("xmlns", "http://www.w3.org/2000/svg"),
                 ],
@@ -152,8 +154,8 @@ pub fn get(model: Model) -> Element(Msg) {
               svg.svg(
                 [
                   attribute.class("rounded"),
-                  attribute("height", "36"),
-                  attribute("width", "54"),
+                  attribute("height", "48"),
+                  attribute("width", "72"),
                   attribute("viewBox", "0 0 60 40"),
                   attribute("xmlns", "http://www.w3.org/2000/svg"),
                 ],
