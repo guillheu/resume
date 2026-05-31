@@ -57,10 +57,12 @@ pub fn get_embed() {
       attribute.width(500),
     ]),
     html.img([
-      attribute.class("hidden print:block object-cover rounded-lg"),
+      attribute.class(
+        "hidden print:block object-cover rounded-lg w-full h-full",
+      ),
       attribute.alt("Video thumbnail"),
       attribute.src(
-        "https://img.youtube.com/vi/" <> video_code <> "/hqdefault.jpg",
+        "https://img.youtube.com/vi/" <> video_code <> "/maxresdefault.jpg",
       ),
     ]),
   ])
