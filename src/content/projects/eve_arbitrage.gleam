@@ -2,7 +2,7 @@ import localization.{type Language, English, French}
 import lustre/attribute.{attribute}
 import lustre/element/html
 
-const video_code = "dQw4w9WgXcQ"
+const video_code = "hDebQpja5tc"
 
 pub const techs = [
   "Gleam",
@@ -32,9 +32,9 @@ pub fn title(lang: Language) -> String {
 pub fn description(lang: Language) -> String {
   case lang {
     English ->
-      "A real-time arbitration tool for the MMORPG \"Eve Online\". Presented at the Gleam Gathering conference in February 2026 (Youtube video available soon)"
+      "A real-time arbitration tool for the MMORPG \"Eve Online\". Presented at the Gleam Gathering in February 2026"
     French ->
-      "Un outil d'arbitrage en temps réel sur le MMORPG \"Eve Online\". Présenté à la conférence Gleam Gathering en Février 2026 (Video Youtube bientôt disponible)"
+      "Un outil d'arbitrage en temps réel sur le MMORPG \"Eve Online\". Présenté au Gleam Gathering en Février 2026"
   }
 }
 
